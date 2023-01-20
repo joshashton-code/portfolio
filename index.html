@@ -6,15 +6,13 @@
 
     <meta name = "viewport" content = "width=device-width, initial-scale=1" charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <title>Josh Ashton | Portfolio</title>
 
   </head>
 
   <body>
-
-      <h1>Hi,<br>I'm Josh</h1>
-      <h3>Student. Backend developer. Aspiring low-level systems developer.</h3> 
 
       <nav>
           <ul>
@@ -25,6 +23,9 @@
           </ul>
       </nav>
 
+      <h1>Hi,<br>I'm Josh.</h1>
+      <h3>Student. Backend developer. Aspiring low-level systems developer.</h3> 
+
       <section id="about">
           <h2>Who am I?</h2>
           <p>Some description about me.</p>
@@ -32,18 +33,40 @@
       </section>
 
       <section id="projects">
-          
+          <h2>Featured Projects</h2>
+          <button>See all</button>
+
+          <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+          <div class="gallery-cell"></div>
+          <div class="gallery-cell"></div>
+          <div class="gallery-cell"></div>
+        </div>
       </section>
+
+      <br><br>
 
       <section id="contact">
-
+		<form id="contactForm" action="" method="post">
+			<div class="newRow">
+				<input type="text" name="first-name" placeholder="First Name">
+				<input type="text" name="last-name" placeholder="Last Name">
+				<input type="email" name="email" placeholder="jsmith@example.com">
+			</div>
+			<div class="newRow">
+				<textarea class="comment" name="message" placeholder="Reach out with any questions!"></textarea>
+			</div>
+			<div class="newRow">
+				<input type="reset" name="reset" id="reset">
+				<input type="submit" name="submit" id="submit">
+			</div>
+		</form>
       </section>
-
   </body>
 
   <footer>
 
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
   </footer>
 
